@@ -31,7 +31,7 @@ const webcrackStep = async (x) => await webcrack(x).code
 const synchronyStep = async (x) => await synchrony.deobfuscateSource(x)
 const checkDeobfs = (x) => x.indexOf("<video />") !== -1
 
-// See https://github.com/Claudemirovsky/worstsource-keys/issues/2
+
 function getCodeVersion() {
     // [hour]:00:10
     const versionDate = new Date()
@@ -43,7 +43,7 @@ function getCodeVersion() {
 }
 
 async function getDeobfuscatedScript() {
-    const vidplayHost = "https://vidplay.lol"
+    const vidplayHost = "https://vidplay.online"
     const headers = {
         "User-Agent": "Mozilla/5.0 (Windows NT 10.0; rv:109.0) Gecko/20100101 Firefox/120.0",
         "Referer": vidplayHost + "/e/",
