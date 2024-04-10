@@ -16,22 +16,17 @@ jobs:
         with:
           ref: master
 
-      - name: Setup pnpm
-        uses: pnpm/action-setup@v2
-        with:
-          version: 8.10.2
-
       - name: Setup NodeJS environment
         uses: actions/setup-node@v4
         with:
-          node-version: 20
-          cache: pnpm
+          node-version: 14
+          cache: npm
 
       - name: Install dependencies
-        run: pnpm install
+        run: npm install
 
       - name: Get keys
-        run: pnpm getkeys
+        run: npm run getkeys
 
       - name: Checkout keys branch
         uses: actions/checkout@v4
